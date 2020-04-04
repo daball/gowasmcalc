@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Go WebAssembly Calculator Starter Kit</title>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Go WebAssembly Calculator</h1>
+            <h2 class="text-muted">Starter Kit</h2>
+            <div class="row">
+                <label class="col-6 col-form-label" for="txtA">Left Operand</label>
+                <label class="col-6 col-form-label" for="txtB">Right Operand</label>
+            </div>
+            <div class="row">
+                <input class="col-6 form-text" id="txtA" placeholder="a">
+                <input class="col-6 form-text" id="txtB" placeholder="b">
+            </div>
+            <div class="row">
+                <label class="col-6 col-form-label" for="txtSum">Sum</label>
+                <label class="col-6 col-form-label" for="txtDifferenceA">Difference</label>
+            </div>
+            <div class="row">
+                <input class="col-6 form-text" id="txtSum" placeholder="sum" readonly="readonly">
+                <input class="col-6 form-text" id="txtDifference" placeholder="difference" readonly="readonly">
+            </div>
+        </div>
+        <script src="/js/wasm_exec.js"></script>
+        <script src="/js/app.js"></script>
+        <script src="/js/wasm_loader.js"></script>
+    </body>
+</html>

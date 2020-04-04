@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66dfcad7-7a3c-4b62-8116-c651a8215237" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gowasmcalc.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/wasm_loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/clean.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/copy_assets.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="$PROJECT_DIR$/../../go1.13.9" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1a0vsqBOCNL3NnzxWRuLOEZZZzX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/js" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/server" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.Build Testing Server">
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="Build Server" type="GoApplicationRunConfiguration" />
+      <toRun name="Copy Assets" type="ShConfigurationType" />
+      <toRun name="Clean ./dist" type="ShConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Build Testing Server" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <output_file path="$PROJECT_DIR$/log/build.log" is_save="true" />
+      <module name="gowasmcalc" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i -o bin/server" />
+      <parameters value="--dir=./dist" />
+      <kind value="FILE" />
+      <filePath value="server/server.go" />
+      <output_directory value="bin" />
+      <method v="2">
+        <option name="Sh.BeforeRunTask" RUN_CONFIG_NAME="Build Web Distribution" RUN_CONFIG_TYPE="ShConfigurationType" />
+      </method>
+    </configuration>
+    <configuration name="Build WebAssembly" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="gowasmcalc" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i -o build/lib.wasm" />
+      <envs>
+        <env name="GOOS" value="js" />
+        <env name="GOARCH" value="wasm" />
+      </envs>
+      <kind value="FILE" />
+      <filePath value="src/main.go" />
+      <output_directory value="build" />
+      <option name="run" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Build Web Distribution" type="ShConfigurationType">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/scripts/copy_assets.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2">
+        <option name="Sh.BeforeRunTask" RUN_CONFIG_NAME="Clean ./dist" RUN_CONFIG_TYPE="ShConfigurationType" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Build WebAssembly" run_configuration_type="GoApplicationRunConfiguration" />
+      </method>
+    </configuration>
+    <configuration name="Clean Build" type="ShConfigurationType">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/scripts/clean.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.Build Testing Server" />
+      <item itemvalue="Go Build.Build WebAssembly" />
+      <item itemvalue="Shell Script.Build Web Distribution" />
+      <item itemvalue="Shell Script.Clean Build" />
+    </list>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="127" key="#Build_Tags_&amp;_Vendoring" timestamp="1585890248937">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="127" key="#Build_Tags_&amp;_Vendoring/0.23.1440.877@0.23.1440.877" timestamp="1585890248937" />
+    <state x="320" y="127" key="#Go_Modules_(vgo)" timestamp="1585889575611">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="127" key="#Go_Modules_(vgo)/0.23.1440.877@0.23.1440.877" timestamp="1585889575611" />
+    <state x="317" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585960135711">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="317" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1585960135711" />
+    <state x="466" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585886977370">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="466" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1585886977370" />
+    <state x="458" y="214" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585889499173">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="458" y="214" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1585889499173" />
+    <state x="466" y="238" key="EnvironmentVariablesDialog" timestamp="1585889940590">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="466" y="238" key="EnvironmentVariablesDialog/0.23.1440.877@0.23.1440.877" timestamp="1585889940590" />
+    <state width="1356" height="168" key="GridCell.Tab.0.bottom" timestamp="1585961582883">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1356" height="168" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1585961582883" />
+    <state width="1356" height="168" key="GridCell.Tab.0.center" timestamp="1585961582883">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1356" height="168" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1585961582883" />
+    <state width="1356" height="168" key="GridCell.Tab.0.left" timestamp="1585961582880">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1356" height="168" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1585961582880" />
+    <state width="1356" height="168" key="GridCell.Tab.0.right" timestamp="1585961582883">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1356" height="168" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1585961582883" />
+    <state x="229" y="100" key="SettingsEditor" timestamp="1585960308593">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="229" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1585960308593" />
+    <state x="385" y="223" width="670" height="676" key="search.everywhere.popup" timestamp="1585961427717">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="223" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1585961427717" />
+  </component>
+</project>
